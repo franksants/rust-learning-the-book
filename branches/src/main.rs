@@ -1,18 +1,7 @@
-use std::io;
 fn main() {
-    let mut input = String::new();
-    io::stdin()
-        .read_line(&mut input)
-        .expect("Deu erro, meu amigo kkkk");
+    let number_greater = true;
 
-    let input: u32 = input
-        .trim()
-        .parse()
-        .expect("Failed to convert the value to u32");
+    let original_number = if number_greater { 10 } else { 20 };
 
-    if input > 10 {
-        println!("{}", input);
-    } else {
-        println!("Error");
-    }
+    println!("The original number value is: {}", original_number);
 }
