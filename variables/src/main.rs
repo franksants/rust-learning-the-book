@@ -1,16 +1,22 @@
+use std::io;
+
 fn main() {
+    let a = [[1, 2, 3, 4, 5], [5, 4, 3, 2, 1]];
 
-    let variavel_testes: u16 = 0xAFF;
+    println!("Please enter an array index.");
 
+    let mut index = String::new();
 
+    io::stdin()
+        .read_line(&mut index)
+        .expect("Failed to read line");
 
-    let testing: i8 = 0x0A;
+    let index: usize = index
+        .trim()
+        .parse()
+        .expect("Index entered was not a number");
 
-    println!("Working right now: {}, {}", testing, variavel_testes);
+    let element = a[1][index];
 
-    let mut x=10;
-    println!("Value of X is {}", x);
-    
-    x=5;
-    println!("Value of X is {}", x);
+    println!("The value of the element at index {index} is: {element}");
 }
