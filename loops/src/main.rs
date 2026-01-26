@@ -1,10 +1,10 @@
 fn main() {
-    let mut stop_condtition = 0;
+    let mut stop_conditition = 0;
     loop {
         println!("Try again!");
-        if stop_condtition > 5 {
+        if stop_conditition > 5 {
             break;
         }
-        stop_condtition += 1;
+        stop_conditition += 1;
     }
 }
