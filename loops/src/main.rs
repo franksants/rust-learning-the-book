@@ -20,12 +20,20 @@ fn main() {
     //};
     //println!("{}", result);
 
-    let mut counter: f64 = 0.0;
-    let mut counter_loop: u32 = 0;
-    while counter < 50.0 {
-        println!("{}", counter);
-        counter += 0.5;
-        counter_loop += 1;
+    //    let mut counter: f64 = 0.0;
+    //    let mut counter_loop: u32 = 0;
+    //    while counter < 50.0 {
+    //        println!("{}", counter);
+    //        counter += 0.5;
+    //        counter_loop += 1;
+    //    }
+    //    println!("Final count: {}", counter_loop);
+
+    let mut elements = [10, 20, 30, 40, 50];
+    for e in 0..elements.len() {
+        elements[e] = 24;
     }
-    println!("Final count: {}", counter_loop);
+    for n in elements {
+        println!("{}", n);
+    }
 }
